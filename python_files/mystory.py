@@ -1,0 +1,11 @@
+noun1 =raw_input("Noun: ")
+name1 = raw_input("Name: ")
+verb1 = raw_input("Verb ending with -ing: ")
+name2 = raw_input("Name: ")
+noun2 =raw_input("Noun: ")
+place1 =raw_input("Place: ")
+verb2 = raw_input("Pasted tense verb: ")
+emotion1 = raw_input("Enter an emotion: ")
+verb3 = raw_input("Pasted tense verb: ")
+
+print("Once upon a time, a " + noun1 + " named " + name1 + " went " + verb1 + " with " + name2 + " the " + noun2 + ". " + name2 + " was a fisty " + noun2 + " so " + name1 + " was in for an unexpected ride. One evening, the two went to " + place1 + ". Unexpectedly " + name2 + " " + verb2 + " " + name1 + ". This made " + name2 + "very " + emotion1 + " and so they " + verb3 + ".")

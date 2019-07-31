@@ -1,0 +1,5 @@
+city_name=raw_input("What is your city? ")
+state_name=raw_input("What is your state? ")
+num_years=int(raw_input("How many years have you lived here for? "))
+print(city_name + ", " + state_name)
+print(num_years)
