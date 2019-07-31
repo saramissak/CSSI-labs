@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A Meme</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <h1>Your Meme</h1>
+    <!--The image needs to be rendered for each new meme
+    so set the div's background-image property inline -->
+    <div id="meme-div" style="background-image:url({{img_url}});">
+    <h2 id="line1" style="color: {%if color: %} black {%else:  %} white{% endif %};">{{Line1}}</h2>
+    <h2 id="line2" style="color: {%if color: %} black {%else:  %} white{% endif %};;"> {{Line2}}</h2>
+    </div>
+
+    <h1>All Memes</h1>
+      {% for ele in all_memes: %}
+        <div id="meme-div" style="background-image:url({{ele.img_url}});">
+        <h2 id="line1" style="color: {%if ele.dark_mode: %} black {%else:  %} white{% endif %};">{{ele.line1}}</h2>
+        <h2 id="line2" style="color: {%if ele.dark_mode: %} black {%else:  %} white{% endif %};;"> {{ele.line2}}</h2>
+        </div>
+        <br>
+      {% endfor %}
+
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>{{greeting}} to making your {{adj}} generator</h1>
+    <h3>Would YOU like to create a meme?!</h3>
+    <img src="{{im_ur}}" alt="Meme meme">
+    <form action="/memeresult" method="post">
+      First line:<br>
+      <input type='text' name='first-line' value='First Line of Meme'>
+      <br>
+      Second line:<br>
+      <input type='text' name='second-line' value='Second Line of Meme'>
+      <br>
+      LINK line:<br>
+      <input type='text' name='link-line' value='link'>
+      <br>
+      LINK name:<br>
+      <input type='text' name='name-line' value='link'>
+      <br>
+      <select name="meme-type">
+        {% for key, value in meme_types.iteritems() %}
+            <option value="{{key}}">{{value["name"]}}</option>
+        {% endfor %}
+      </select>
+      <br>
+      <input type="checkbox" name="color" value="black"> Check this box if you'd like black text<br>
+      <br>
+        <input type="submit" value="create meme">
+    </form>
+
+  </body>
+</html>

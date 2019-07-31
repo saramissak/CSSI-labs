@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>The Wands</h1>
+    {% for each_wand in wands %}
+      <ul>
+        <li>
+            {{each_wand.owner.get().first_name}} {{each_wand.owner.get().last_name}}
+        </li>
+        <li>
+            {{each_wand.core}}
+        </li>
+        <li>
+            {{each_wand.material}}
+        </li>
+        <li>
+          {{each_wand.length}}
+        </li>
+      </ul>
+
+    {% endfor %}
+  </body>
+</html>
